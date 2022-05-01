@@ -1,0 +1,49 @@
+.header-logo {
+  padding-left: 20px;
+  z-index: 3;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.header-logo__pink {
+  fill: @white;
+  display: none;
+
+  &:hover {
+    fill: @pink;
+  }
+
+  &:active {
+    fill: @white;
+    opacity: 0.3;
+  }
+}
+
+
+.header-logo__pink--visible-desktop {
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.header-logo__pink--visible-tablet {
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.header-logo__pink--visible-phone {
+  @media (max-width: @max-width) {
+    display: block;
+  }
+}

@@ -1,0 +1,141 @@
+.main-nav {
+  width: 100%;
+  position: absolute;
+  top: 66px;
+
+  @media (min-width: @tablet-width) {
+    top: 110px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 620px;
+    height: 50px;
+    position: relative;
+    top: 0;
+  }
+
+  @media (max-width: @max-tablet-width) {
+    background-color: @background-grey;
+  }
+}
+
+.main-nav__list {
+  list-style: none;
+  padding: 0;
+}
+
+
+.main-nav--opened .main-nav__toggle-wrapper {
+  width: 100%;
+  padding: 0;
+  border-bottom: 1px solid @black;
+  border-top: 1px solid @nav-border-color;
+  background-color: @text-grey;
+  height: 66px;
+  position: absolute;
+  top: -68px;
+
+
+  @media (min-width: @tablet-width) {
+    height: 110px;
+    top: -112px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  position: absolute;
+  top: 30%;
+  right: 4%;
+  z-index: 2;
+  display: block;
+  height: 33px;
+  width: 33px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    top: 42%;
+    right: 4%;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: -1px;
+    width: 30px;
+    height: 2px;
+    background-color: #ffffff;
+
+    @media (min-width: @tablet-width) {
+      top: 8px;
+      left: 13px;
+    }
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+
+.main-nav__toggle-wrapper {
+  width: 20%;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 4px;
+  background-color: @white;
+  box-shadow: 0 9px 0 0 @white, 0 18px 0 0 @white;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    right: 0;
+  }
+}
+
+.main-nav--closed .site-list {
+  @media (max-width: @max-tablet-width) {
+    display: none;
+  }
+}
+
+
+.main-nav--closed .main-nav__toggle {
+  position: absolute;
+  top: -44px;
+  right: 20px;
+  z-index: 2;
+  display: block;
+  height: 24px;
+  width: 50px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    height: 24px;
+    top: -65px;
+  }
+}

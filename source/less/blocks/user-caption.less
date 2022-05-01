@@ -1,0 +1,78 @@
+.user-caption {
+  background-color: @background-grey;
+  width: 232px;
+  padding: 16px 31px 19px 17px;
+
+  @media (min-width: @tablet-width) {
+    width: 270px;
+    padding: 22px 0 0 30px;
+    min-height: 133px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 24px 0 0 27px;
+    width: 273px;
+  }
+}
+
+.user-caption__user-name {
+  color: @text-grey;
+  font-weight: bold;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.user-caption__caption-text {
+  color: @text-grey;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    min-height: 61px;
+    margin-right: 38px;
+  }
+}
+
+.user-caption__time {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 24px;
+  color: @text-grey;
+  text-transform: uppercase;
+}
+
+.user-caption__likes-counter {
+  text-transform: uppercase;
+  color: @pink;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  display: block;
+  position: relative;
+  margin-left: 18px;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+    margin-left: 0;
+  }
+}
+
+.user-caption__likes-heart {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
+.user-caption__likes-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 13px;
+
+  @media (min-width: @tablet-width) {
+    width: 240px;
+    margin: 0;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,252 @@
+.foto-filter {
+  height: 121px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 38px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+
+.foto-filter__input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+  margin: 37px auto 0;
+  align-items: center;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-evenly;
+    margin: 0;
+  }
+}
+
+.foto-filter__item {
+  width: 48px;
+  height: 48px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.foto-filter__item-icon--crop {
+  fill: @pink;
+
+  @media (min-width: @tablet-width) {
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.foto-filter__item-icon--fill {
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 22px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 48px;
+    height: 43px;
+  }
+}
+
+.foto-filter__item-icon--contrast {
+  margin-top: 6px;
+  margin-left: 4px;
+
+  @media (min-width: @tablet-width) {
+    width: 16px;
+    height: 16px;
+    margin-top: -9px;
+    margin-left: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 32px;
+    height: 32px;
+    margin-left: 6px;
+  }
+}
+
+.foto-filter__item-icon--fill,
+.foto-filter__item-icon--contrast {
+  fill: @text-grey;
+  opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    opacity: 1;
+    fill: @pink;
+  }
+}
+
+.foto-filter__item:hover {
+  opacity: 0.5;
+}
+
+
+.foto-filter__range-toggle {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid @pink;
+  background-color: @background-grey;
+  position: absolute;
+  top: -6px;
+  right: 73px;
+}
+
+.foto-filter__range-item--crop .foto-filter__range-toggle {
+  @media (min-width: @tablet-width) {
+    right: 28px;
+  }
+}
+
+.foto-filter__range-item--fill .foto-filter__range-toggle {
+  @media (min-width: @tablet-width) {
+    right: 163px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 226px;
+  }
+}
+
+.foto-filter__range-item--contrast .foto-filter__range-toggle {
+  @media (min-width: @tablet-width) {
+    right: 92px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 125px;
+  }
+}
+
+.foto-filter__range-toggle:active {
+  background-color: @pink;
+}
+
+.foto-filter__range-line {
+  cursor: pointer;
+  width: 240px;
+  height: 2px;
+  display: block;
+  background-color: @text-grey;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 202px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+    margin-left: 44px;
+  }
+}
+
+.foto-filter__range-item {
+  position: relative;
+  height: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
+    height: auto;
+    margin-top: 0;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 275px;
+      position: absolute;
+      bottom: -34px;
+      left: -55px;
+      background: #283645;
+      opacity: 0.1;
+
+      @media (min-width: @desktop-width) {
+        left: -49px;
+        width: 412px;
+      }
+    }
+  }
+}
+
+.foto-filter__range-item--fill,
+.foto-filter__range-item--contrast {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.foto-filter__item-icon--crop:active,
+.foto-filter__item-icon--fill:active {
+  opacity: 1;
+  fill: @pink;
+}
+
+.foto-filter__item-icon--contrast:active {
+  fill: @pink;
+}
+
+.foto-filter__input-wrapper {
+  display: flex;
+  width: 207px;
+  justify-content: space-between;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    height: 195px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 66px;
+    margin-left: 38px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -50px;
+  }
+}
+
+.foto-filter__range-wrapper {
+  display: flex;
+  width: 320px;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(40, 54, 69, 0.1);
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+    height: 163px;
+    justify-content: normal;
+    margin-right: 28px;
+    margin-top: 81px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 76px;
+    height: 165px;
+  }
+}

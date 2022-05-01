@@ -1,0 +1,69 @@
+.catalog-header {
+  background-color: @text-grey;
+  background: url("../img/back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 237px;
+  width: 100%;
+  margin-bottom: 44px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 440px;
+    margin-bottom: 92px;
+    background: url("../img/background-header-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-header-tablet@2.jpg");
+      background-size: 100%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background: url("../img/back-header-index-desktop.jpg");
+    height: 394px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-header-index-desktop@2.jpg");
+      background-size: 100%;
+    }
+  }
+}
+
+.catalog-header__wrapper {
+  background-color: @header;
+  height: 66px;
+
+  @media (min-width: @tablet-width) {
+    height: 110px;
+  }
+}
+
+.catalog-header__title {
+  color: @white;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  width: 280px;
+  margin: 28px auto 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 50px;
+    line-height: 68px;
+    width: 358px;
+    margin: 64px auto 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 59px;
+  }
+}
+
+.catalog-header__logo {
+  z-index: 3;
+  padding-left: 20px;
+}

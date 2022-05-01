@@ -1,0 +1,43 @@
+.footer__logo {
+  margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.footer-logo__pink {
+  fill: #000;
+}
+
+.footer-logo__pink:hover {
+  fill: @pink;
+}
+
+.footer-logo__pink:active {
+  fill: #000;
+  opacity: 0.3;
+}
+
+.footer-logo__glasses:active {
+  opacity: 0.3;
+}
+
+.footer-logo__pink-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.footer-logo__pink,
+.footer-logo__glasses {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.footer-logo__glasses {
+  fill: @pink;
+}

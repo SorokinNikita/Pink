@@ -1,0 +1,150 @@
+.contacts {
+  text-align: center;
+}
+
+.contacts__header {
+  color: @text-grey;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  width: 236px;
+  margin: auto;
+  margin-top: 39px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+    line-height: 54px;
+    width: 370px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+    width: 500px;
+  }
+}
+
+.contacts__header-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    margin-top: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 59px;
+  }
+}
+
+.contacts__title {
+  color: @text-grey;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 19px;
+  }
+}
+
+.contacts__item {
+  margin-top: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 32px;
+    margin-left: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 14px;
+  }
+}
+
+.contacts__item + .contacts__item {
+  margin-top: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 32px;
+    margin-right: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 3;
+    margin-left: 9px;
+  }
+}
+
+.contacts__value {
+  color: @pink;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  font-style: normal;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 3px;
+    display: block;
+  }
+}
+
+.contacts__value:hover {
+  color: @text-grey;
+}
+
+.contacts__value:active {
+  opacity: 0.3;
+}
+
+.contacts__map-item {
+  width: 100%;
+  max-width: 1200px;
+  height: 200px;
+
+  @media (min-width: @tablet-width) {
+    height: 374px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 502px;
+  }
+}
+
+.contacts__wrapper {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 875px;
+    margin-top: 9px;
+  }
+}
+
+.contacts__item--address {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  margin-top: 20px;
+  position: relative;
+  z-index: 3;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+    margin-left: 27px;
+  }
+}

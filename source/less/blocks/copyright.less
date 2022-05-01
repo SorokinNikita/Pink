@@ -1,0 +1,44 @@
+.copyright {
+  @media (min-width: @desktop-width) {
+    margin-top: 5px;
+  }
+}
+
+.copyright__link {
+  color: @text-grey;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  margin-top: 23px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 12px;
+  }
+}
+
+.copyright__link-icon {
+  fill: @pink;
+
+  &:hover {
+    fill: @text-grey;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__developer {
+  margin-right: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
